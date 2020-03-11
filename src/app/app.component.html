@@ -1,5 +1,4 @@
-<nb-layout>
-
+<nb-layout center>
   <nb-layout-header fixed>
     <h1>
       Company Name
@@ -14,9 +13,126 @@
     </div>
   </nb-sidebar>
 
-  <nb-layout-column>
 
+
+  
+
+
+
+
+  <nb-layout-column>
     <nb-card>
+      <nb-card-header>Nebula</nb-card-header>
+      <nb-card-body>
+        A nebula is an interstellar cloud of dust, hydrogen, helium and other
+        ionized gases. Originally, nebula was a name for any diffuse
+        astronomical object, including galaxies beyond the Milky Way.
+      </nb-card-body>
+      <nb-card-footer>By Wikipedia</nb-card-footer>
+    </nb-card>
+
+
+  <nb-card [size]="'small'">
+    <nb-card-header>List inside nb-card</nb-card-header>
+    <nb-list>
+      <nb-list-item *ngFor="let fruit of fruits">
+        {{ fruit }}
+      </nb-list-item>
+    </nb-list>
+  </nb-card>
+
+  <nb-flip-card>
+    <nb-card-front>
+      <nb-card accent="info" status="info">
+        <nb-card-header>nb-flip-card</nb-card-header>
+        <nb-card-body>
+          Text
+        </nb-card-body>
+      </nb-card>
+    </nb-card-front>
+    <nb-card-back>
+      <nb-card>
+        <nb-card-header>Back</nb-card-header>
+        <nb-card-body>
+          Text
+        </nb-card-body>
+      </nb-card>
+    </nb-card-back>
+  </nb-flip-card>
+
+
+
+
+  <nb-reveal-card>
+    <nb-card-front>
+      <nb-card accent="success">
+        <nb-card-header>nb-reveal-card</nb-card-header>
+        <nb-card-body>
+          A nebula is an interstellar cloud of dust, hydrogen,
+          helium and other ionized gases.
+          Originally, nebula was a name for
+          any diffuse astronomical object,
+          including galaxies beyond the Milky Way.
+        </nb-card-body>
+      </nb-card>
+    </nb-card-front>
+    <nb-card-back>
+      <nb-card accent="primary">
+        <nb-card-header>Back Card Header</nb-card-header>
+        <nb-card-body>
+          A nebula is an interstellar cloud of dust, hydrogen,
+          helium and other ionized gases.
+          Originally, nebula was a name for
+          any diffuse astronomical object,
+          including galaxies beyond the Milky Way.
+        </nb-card-body>
+      </nb-card>
+    </nb-card-back>
+  </nb-reveal-card>
+
+
+
+
+
+
+
+  </nb-layout-column>
+
+
+
+
+
+  <nb-layout-column>
+    <nb-card>
+      <nb-card-header>Other</nb-card-header>
+      <nb-card-body>
+        A nebula is an interstellar cloud of dust, hydrogen, helium and other
+        ionized gases. Originally, nebula was a name for any diffuse
+        astronomical object, including galaxies beyond the Milky Way.
+      </nb-card-body>
+      <nb-card-footer>By Wikipedia</nb-card-footer>
+    </nb-card>
+
+    <nb-card accent="info">
+      <nb-card-header>Nebula</nb-card-header>
+      <nb-card-body>
+        A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+        Originally, nebula was a name for any diffuse astronomical object,
+        including galaxies beyond the Milky Way.
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card accent="danger">
+      <nb-card-header>Nebula</nb-card-header>
+      <nb-card-body>
+        A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+        Originally, nebula was a name for any diffuse astronomical object,
+        including galaxies beyond the Milky Way.
+      </nb-card-body>
+    </nb-card>
+
+
+    <nb-card status="warning">
       <nb-card-header>Nebula</nb-card-header>
       <nb-card-body>
         A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
@@ -26,8 +142,21 @@
       <nb-card-footer>By Wikipedia</nb-card-footer>
     </nb-card>
 
-    <router-outlet></router-outlet>
+
+    <nb-card size="small">
+      <nb-list>
+        <nb-list-item *ngFor="let user of users">
+          <nb-user [name]="user.name" [title]="user.title">
+          </nb-user>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+
+
 
   </nb-layout-column>
 
+  <!--    
+    <router-outlet></router-outlet>
+-->
 </nb-layout>
