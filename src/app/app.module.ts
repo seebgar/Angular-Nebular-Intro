@@ -8,11 +8,15 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 // NUEVOS 1.
-import { NbSidebarModule, NbSidebarService, NbCardModule, NbListModule, NbUserModule } from '@nebular/theme';
+import { NbSidebarModule, NbSidebarService, NbCardModule, NbListModule, NbUserModule, NbChatModule } from '@nebular/theme';
+import { HomeComponent } from './components/home/home.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,7 @@ import { NbSidebarModule, NbSidebarService, NbCardModule, NbListModule, NbUserMo
     NbCardModule,
     NbListModule,
     NbUserModule,
+    NbChatModule,
     NbEvaIconsModule
   ],
   providers: [
