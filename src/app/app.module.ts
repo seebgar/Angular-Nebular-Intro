@@ -8,7 +8,7 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 // NUEVOS 1.
-import { NbSidebarModule, NbSidebarService } from '@nebular/theme';
+import { NbSidebarModule, NbSidebarService, NbCardModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { NbSidebarModule, NbSidebarService } from '@nebular/theme';
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbSidebarModule, // NUEVO 2.
+    NbCardModule,
     NbEvaIconsModule
   ],
   providers: [
